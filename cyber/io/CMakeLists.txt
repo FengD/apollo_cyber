@@ -2,7 +2,7 @@ project(cyber_io)
 
 file(GLOB SRCS *.cc)
 add_library(${PROJECT_NAME} SHARED ${SRCS})
-
+add_dependencies(${PROJECT_NAME} cyber_proto)
 
 add_executable(${PROJECT_NAME}_tcp_echo_client example/tcp_echo_client.cc)
 target_link_libraries(${PROJECT_NAME}_tcp_echo_client cyber cyber_component)

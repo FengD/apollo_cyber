@@ -1,5 +1,6 @@
 project(sensor_proto)
 
+
 include_directories(modules ${CMAKE_CURRENT_BINARY_DIR}/modules)
 file(GLOB proto_srcs *.proto)
 set(Protobuf_USE_STATIC_LIBS on)

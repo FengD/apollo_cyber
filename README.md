@@ -8,7 +8,7 @@ cmake ..
 make -j20
 
 # Dpendencies
-sudo apt install asio-dev
-sudo apt install libtinyxml2-dev
-protobuf > 3.14.0
-fastrtps (in cyber/3rd-party)
+* sudo apt install asio-dev
+* sudo apt install libtinyxml2-dev
+* protobuf > 3.14.0
+* fastrtps (in 3rd-party for x86_64/aarch64)

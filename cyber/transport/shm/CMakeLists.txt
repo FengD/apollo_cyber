@@ -4,7 +4,7 @@ project(cyber_transport_shm)
 
 file(GLOB SRCS *.cc)
 add_library(${PROJECT_NAME} SHARED ${SRCS})
-
+add_dependencies(${PROJECT_NAME} cyber_proto)
 target_link_libraries(${PROJECT_NAME} 
     rt
 )
