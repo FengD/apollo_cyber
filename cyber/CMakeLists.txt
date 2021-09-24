@@ -43,27 +43,49 @@ add_subdirectory(sensor_proto)
 
 file(GLOB SRCS *.cc)
 add_library(${PROJECT_NAME} SHARED ${SRCS})
+add_dependencies(${PROJECT_NAME} cyber_blocker)
+add_dependencies(${PROJECT_NAME} cyber_class_loader)
+add_dependencies(${PROJECT_NAME} cyber_common)
+add_dependencies(${PROJECT_NAME} cyber_component)
+add_dependencies(${PROJECT_NAME} cyber_croutine)
+add_dependencies(${PROJECT_NAME} cyber_event)
+add_dependencies(${PROJECT_NAME} cyber_io)
+add_dependencies(${PROJECT_NAME} cyber_logger)
+add_dependencies(${PROJECT_NAME} cyber_mainboard)
+add_dependencies(${PROJECT_NAME} cyber_message)
+add_dependencies(${PROJECT_NAME} cyber_node)
+add_dependencies(${PROJECT_NAME} cyber_parameter)
+add_dependencies(${PROJECT_NAME} cyber_proto)
+add_dependencies(${PROJECT_NAME} cyber_record)
+add_dependencies(${PROJECT_NAME} cyber_scheduler)
+add_dependencies(${PROJECT_NAME} cyber_service_discovery)
+add_dependencies(${PROJECT_NAME} cyber_sysmo)
+add_dependencies(${PROJECT_NAME} cyber_task)
+add_dependencies(${PROJECT_NAME} cyber_timer)
+add_dependencies(${PROJECT_NAME} cyber_transport)
 target_link_libraries(${PROJECT_NAME} 
-    cyber_event
     cyber_blocker
+    cyber_class_loader
     cyber_common
     cyber_component
     cyber_croutine
-    cyber_node
-    cyber_message
-    cyber_recoder_player
-    cyber_service_discovery
-    cyber_scheduler
-    cyber_sysmo
-    cyber_time
-    cyber_timer
-    cyber_logger
-    cyber_task
-    cyber_record
-    cyber_transport
-    cyber_proto
+    cyber_event
     cyber_io
-    cyber_proto glog
+    cyber_logger
+    cyber_mainboard
+    cyber_message
+    cyber_node
+    cyber_parameter
+    cyber_proto
+    cyber_record
+    cyber_scheduler
+    cyber_service_discovery
+    cyber_sysmo
+    cyber_task
+    cyber_timer
+    cyber_transport
+    glog
+    fastrtps
 )
 
 file(GLOB HEADERS *.h)

@@ -12,7 +12,15 @@ add_subdirectory(shm)
 add_subdirectory(transmitter)
 
 file(GLOB SRCS *.cc)
-add_library(${PROJECT_NAME} SHARED ${SRCS})
+add_library(${PROJECT_NAME} STATIC ${SRCS})
+add_dependencies(${PROJECT_NAME}
+    cyber_transport_common
+    cyber_transport_dispatcher
+    cyber_transport_message
+    cyber_transport_qos
+    cyber_transport_rtps
+    cyber_transport_shm
+)
 target_link_libraries(${PROJECT_NAME}
     cyber_transport_common
     cyber_transport_dispatcher
@@ -25,4 +33,3 @@ target_link_libraries(${PROJECT_NAME}
 
 file(GLOB HEADERS *.h)
 install(FILES ${HEADERS} DESTINATION /apollo/cyber/include/cyber/transport/)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/lib${PROJECT_NAME}.so DESTINATION /apollo/cyber/lib/)

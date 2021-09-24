@@ -4,30 +4,10 @@ project(cyber_monitor)
 
 file(GLOB SRCS *.cc)
 add_executable(${PROJECT_NAME} ${SRCS})
+add_dependencies(${PROJECT_NAME} cyber)
 target_link_libraries(${PROJECT_NAME} 
-    rt
-    atomic
-    cyber
-    cyber_event
-    cyber_blocker
-    cyber_common
-    cyber_component
-    cyber_croutine
-    cyber_node
-    cyber_message
-    cyber_service_discovery
-    cyber_scheduler
-    cyber_sysmo
-    cyber_time
-    cyber_timer
-    cyber_logger
-    cyber_task
-    cyber_record
-    cyber_transport
-    cyber_proto uuid curses
-    glog gflags pthread ${PROTOBUF_LIBRARIES}
-    fastcdr
-    fastrtps
+    cyber curses
+    pthread
 )
 
 file(GLOB HEADERS *.h)
