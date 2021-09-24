@@ -84,8 +84,6 @@ target_link_libraries(${PROJECT_NAME}
     cyber_task
     cyber_timer
     cyber_transport
-    glog
-    fastrtps
 )
 
 file(GLOB HEADERS *.h)
