@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -std=c++14 -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libcyber_transport_message.so -o libcyber_transport_message.so CMakeFiles/cyber_transport_message.dir/message_info.cc.o   -L/home/ding/Documents/apollo_cyber/cyber/proto 

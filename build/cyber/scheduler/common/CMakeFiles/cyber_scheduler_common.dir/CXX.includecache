@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../cyber/binary.h
+string
+-
+
+../cyber/common/log.h
+cstdarg
+-
+string
+-
+glog/logging.h
+../cyber/common/glog/logging.h
+glog/raw_logging.h
+../cyber/common/glog/raw_logging.h
+cyber/binary.h
+../cyber/common/cyber/binary.h
+
+../cyber/scheduler/common/pin_thread.h
+string
+-
+thread
+-
+vector
+-
+cyber/common/log.h
+../cyber/scheduler/common/cyber/common/log.h
+
+/home/ding/Documents/apollo_cyber/cyber/scheduler/common/pin_thread.cc
+cyber/scheduler/common/pin_thread.h
+/home/ding/Documents/apollo_cyber/cyber/scheduler/common/cyber/scheduler/common/pin_thread.h
+sched.h
+-
+sys/resource.h
+-
+

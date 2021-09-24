@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -std=c++14 -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libcyber_service_discovery_role.so -o libcyber_service_discovery_role.so CMakeFiles/cyber_service_discovery_role.dir/role.cc.o   -L/home/ding/Documents/apollo_cyber/cyber/proto 

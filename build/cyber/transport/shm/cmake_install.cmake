@@ -1,0 +1,76 @@
+# Install script for directory: /home/ding/Documents/apollo_cyber/cyber/transport/shm
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
+endif()
+string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
+
+# Set the install configuration name.
+if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+  if(BUILD_TYPE)
+    string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
+           CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
+  else()
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+  endif()
+  message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
+endif()
+
+# Set the component getting installed.
+if(NOT CMAKE_INSTALL_COMPONENT)
+  if(COMPONENT)
+    message(STATUS "Install component: \"${COMPONENT}\"")
+    set(CMAKE_INSTALL_COMPONENT "${COMPONENT}")
+  else()
+    set(CMAKE_INSTALL_COMPONENT)
+  endif()
+endif()
+
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
+endif()
+
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/apollo/cyber/include/cyber/transport/shm/block.h;/apollo/cyber/include/cyber/transport/shm/condition_notifier.h;/apollo/cyber/include/cyber/transport/shm/multicast_notifier.h;/apollo/cyber/include/cyber/transport/shm/notifier_base.h;/apollo/cyber/include/cyber/transport/shm/notifier_factory.h;/apollo/cyber/include/cyber/transport/shm/posix_segment.h;/apollo/cyber/include/cyber/transport/shm/readable_info.h;/apollo/cyber/include/cyber/transport/shm/segment.h;/apollo/cyber/include/cyber/transport/shm/segment_factory.h;/apollo/cyber/include/cyber/transport/shm/shm_conf.h;/apollo/cyber/include/cyber/transport/shm/state.h;/apollo/cyber/include/cyber/transport/shm/xsi_segment.h")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/apollo/cyber/include/cyber/transport/shm" TYPE FILE FILES
+    "/home/ding/Documents/apollo_cyber/cyber/transport/shm/block.h"
+    "/home/ding/Documents/apollo_cyber/cyber/transport/shm/condition_notifier.h"
+    "/home/ding/Documents/apollo_cyber/cyber/transport/shm/multicast_notifier.h"
+    "/home/ding/Documents/apollo_cyber/cyber/transport/shm/notifier_base.h"
+    "/home/ding/Documents/apollo_cyber/cyber/transport/shm/notifier_factory.h"
+    "/home/ding/Documents/apollo_cyber/cyber/transport/shm/posix_segment.h"
+    "/home/ding/Documents/apollo_cyber/cyber/transport/shm/readable_info.h"
+    "/home/ding/Documents/apollo_cyber/cyber/transport/shm/segment.h"
+    "/home/ding/Documents/apollo_cyber/cyber/transport/shm/segment_factory.h"
+    "/home/ding/Documents/apollo_cyber/cyber/transport/shm/shm_conf.h"
+    "/home/ding/Documents/apollo_cyber/cyber/transport/shm/state.h"
+    "/home/ding/Documents/apollo_cyber/cyber/transport/shm/xsi_segment.h"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/apollo/cyber/lib/libcyber_transport_shm.so")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/apollo/cyber/lib" TYPE FILE FILES "/home/ding/Documents/apollo_cyber/build/cyber/transport/shm/libcyber_transport_shm.so")
+endif()
+

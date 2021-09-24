@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../cyber/binary.h
+string
+-
+
+../cyber/common/log.h
+cstdarg
+-
+string
+-
+glog/logging.h
+../cyber/common/glog/logging.h
+glog/raw_logging.h
+../cyber/common/glog/raw_logging.h
+cyber/binary.h
+../cyber/common/cyber/binary.h
+
+../cyber/service_discovery/role/role.h
+cstdint
+-
+memory
+-
+string
+-
+cyber/proto/role_attributes.pb.h
+../cyber/service_discovery/role/cyber/proto/role_attributes.pb.h
+
+/home/ding/Documents/apollo_cyber/cyber/service_discovery/role/role.cc
+cyber/service_discovery/role/role.h
+/home/ding/Documents/apollo_cyber/cyber/service_discovery/role/cyber/service_discovery/role/role.h
+cyber/common/log.h
+/home/ding/Documents/apollo_cyber/cyber/service_discovery/role/cyber/common/log.h
+
