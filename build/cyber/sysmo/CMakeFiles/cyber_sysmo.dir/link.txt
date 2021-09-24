@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -std=c++14 -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libcyber_sysmo.so -o libcyber_sysmo.so CMakeFiles/cyber_sysmo.dir/sysmo.cc.o   -L/home/ding/Documents/apollo_cyber/cyber/proto 

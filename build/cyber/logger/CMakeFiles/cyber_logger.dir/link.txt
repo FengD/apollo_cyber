@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -std=c++14 -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libcyber_logger.so -o libcyber_logger.so CMakeFiles/cyber_logger.dir/async_logger.cc.o CMakeFiles/cyber_logger.dir/log_file_object.cc.o CMakeFiles/cyber_logger.dir/logger.cc.o CMakeFiles/cyber_logger.dir/logger_util.cc.o   -L/home/ding/Documents/apollo_cyber/cyber/proto 

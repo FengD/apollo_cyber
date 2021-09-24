@@ -1,5 +1,5 @@
 project(cyber_croutine)
-
+add_subdirectory(detail)
 file(GLOB SRCS *.cc detail/*.cc detail/swap_x86_64.S)
 add_library(${PROJECT_NAME} SHARED ${SRCS})
 target_link_libraries(${PROJECT_NAME} 

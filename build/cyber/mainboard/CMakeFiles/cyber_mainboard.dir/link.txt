@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -std=c++14 -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libcyber_mainboard.so -o libcyber_mainboard.so CMakeFiles/cyber_mainboard.dir/mainboard.cc.o CMakeFiles/cyber_mainboard.dir/module_argument.cc.o CMakeFiles/cyber_mainboard.dir/module_controller.cc.o   -L/home/ding/Documents/apollo_cyber/cyber/proto 

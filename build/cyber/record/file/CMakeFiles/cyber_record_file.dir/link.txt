@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -std=c++14 -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libcyber_record_file.so -o libcyber_record_file.so CMakeFiles/cyber_record_file.dir/record_file_base.cc.o CMakeFiles/cyber_record_file.dir/record_file_reader.cc.o CMakeFiles/cyber_record_file.dir/record_file_writer.cc.o   -L/home/ding/Documents/apollo_cyber/cyber/proto 

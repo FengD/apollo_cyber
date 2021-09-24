@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -std=c++14 -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libcyber_timer.so -o libcyber_timer.so CMakeFiles/cyber_timer.dir/timer.cc.o CMakeFiles/cyber_timer.dir/timing_wheel.cc.o   -L/home/ding/Documents/apollo_cyber/cyber/proto  -Wl,-rpath,/home/ding/Documents/apollo_cyber/cyber/proto:/home/ding/Documents/apollo_cyber/build/cyber/time ../time/libcyber_time.so 

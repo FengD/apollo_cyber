@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -std=c++14 -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libcyber_transport_common.so -o libcyber_transport_common.so CMakeFiles/cyber_transport_common.dir/endpoint.cc.o CMakeFiles/cyber_transport_common.dir/identity.cc.o   -L/home/ding/Documents/apollo_cyber/cyber/proto  -Wl,-rpath,/home/ding/Documents/apollo_cyber/cyber/proto -luuid 
