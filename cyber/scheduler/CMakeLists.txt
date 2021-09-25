@@ -5,9 +5,9 @@ add_subdirectory(policy)
 
 file(GLOB SRCS *.cc)
 add_library(${PROJECT_NAME} STATIC ${SRCS})
-add_dependencies(${PROJECT_NAME} cyber_scheduler_policy)
+add_dependencies(${PROJECT_NAME} cyber_scheduler_common)
 target_link_libraries(${PROJECT_NAME}
-    cyber_scheduler_policy
+    cyber_scheduler_common
 )
 
 file(GLOB HEADERS *.h)

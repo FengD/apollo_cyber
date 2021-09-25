@@ -14,7 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/sensor_proto/imu.pb.h"
+#include "sensor_proto/imu.pb.h"
 #include "cyber/cyber.h"
 
 void MessageCallback(
