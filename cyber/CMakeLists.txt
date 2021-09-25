@@ -89,5 +89,5 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 file(GLOB HEADERS *.h)
-install(FILES ${HEADERS} DESTINATION /apollo/cyber/include/cyber/)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/lib${PROJECT_NAME}.so DESTINATION /apollo/cyber/lib/)
+install(FILES ${HEADERS} DESTINATION apollo/cyber/include/cyber/)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/lib${PROJECT_NAME}.so DESTINATION apollo/cyber/lib/)
