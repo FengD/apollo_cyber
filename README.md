@@ -1,8 +1,8 @@
 # Description
 Apollo cyber is a great runtime framework.
 
-cyber: The apollo [cyber](https://github.com/ApolloAuto/apollo/tree/master/cyber)
-sensor_proto: Could be used for sensor message. 
+* cyber: The apollo [cyber](https://github.com/ApolloAuto/apollo/tree/master/cyber)
+* sensor_proto: Could be used for sensor message. 
 
 # Build
 ``` shell
