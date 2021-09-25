@@ -11,6 +11,10 @@ cmake ..
 make -j20
 ```
 
+# Tools
+* to use the tools like cyber_visualizer use `-DBUILD_TOOLS=true`
+* deps: qt5
+
 # Dependencies
 * sudo apt install asio-dev
 * sudo apt install libtinyxml2-dev
