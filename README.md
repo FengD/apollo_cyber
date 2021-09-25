@@ -2,11 +2,11 @@
 Apollo cyber is a great runtime framework.
 
 # Build
-mkdir build
-cd build
+``` shell
+mkdir build && cd build
 cmake ..
 make -j20
-
+```
 # Dpendencies
 * sudo apt install asio-dev
 * sudo apt install libtinyxml2-dev
