@@ -18,6 +18,6 @@ protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${proto_srcs})
 add_library(${PROJECT_NAME} SHARED ${PROTO_SRCS} ${PROTO_HDRS})
 target_link_libraries(${PROJECT_NAME} ${PROTOBUF_LIBRARIES} ${PROTOBUF_PROTOC_LIBRARIES} pthread)
 
-
+install(FILES ${proto_srcs} DESTINATION apollo/cyber/sensor_proto/)
 install(FILES ${PROTO_HDRS} DESTINATION apollo/cyber/include/sensor_proto/)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/lib${PROJECT_NAME}.so DESTINATION apollo/cyber/lib/)
