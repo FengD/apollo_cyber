@@ -4,20 +4,18 @@ Apollo cyber is a great runtime framework.
 * cyber: The apollo [cyber](https://github.com/ApolloAuto/apollo/tree/master/cyber)
 
 # Build
-``` shell
-mkdir build && cd build
-cmake ..
-make -j20
+`./build.sh` build the project.
+`./build.sh clean` clean the build.
+...
+run `./build.sh help` to see the details.
 
 # for aarch64
-cmake -DBUILD_AARCH64=true
+`./build.sh build_cross` clean the build.
 
-# for visualizer tool
-cmake -DBUILD_TOOLS=true
-```
+# for tools
+`./build.sh build_tools` clean the build.
 
 # Tools
-* to use the tools like cyber_visualizer use `-DBUILD_TOOLS=true`
 * deps: qt5
 
 # Dependencies
@@ -26,7 +24,7 @@ cmake -DBUILD_TOOLS=true
 * uuid
 * rt
 * pthread
-* protobuf > 3.14.0
+* protobuf
 * fastrtps (in 3rd_party for x86_64/aarch64) copy `lib` in /usr/local/lib and `include` in /usr/local/include
 
 # Best practice
