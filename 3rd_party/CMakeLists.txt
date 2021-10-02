@@ -10,5 +10,5 @@ else()
     set(ARCH "x86_64")
 endif()
 
-file(GLOB LIBS ${CMAKE_CURRENT_SOURCE_DIR}/${ARCH}/fast-rtps-1.5.0-1/lib/*.so*)
+file(GLOB LIBS ${CMAKE_CURRENT_SOURCE_DIR}/fast-rtps-1.5.0-1/${ARCH}/lib/*.so*)
 install(FILES ${LIBS} DESTINATION apollo/cyber/lib/)
