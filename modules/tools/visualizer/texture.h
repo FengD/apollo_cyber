@@ -20,7 +20,7 @@
 #include <QtGui/QOpenGLBuffer>
 #include <memory>
 
-#include "sensor_proto/image.pb.h"
+#include "cyber/sensor_proto/image.pb.h"
 
 class Texture {
  public:

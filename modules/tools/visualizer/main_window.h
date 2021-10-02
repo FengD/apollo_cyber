@@ -23,9 +23,9 @@
 #include <memory>
 #include <string>
 
-#include "sensor_proto/lidar.pb.h"
-#include "sensor_proto/radar.pb.h"
-#include "sensor_proto/image.pb.h"
+#include "cyber/sensor_proto/lidar.pb.h"
+#include "cyber/sensor_proto/radar.pb.h"
+#include "cyber/sensor_proto/image.pb.h"
 #include "modules/tools/visualizer/channel_reader.h"
 #include "modules/tools/visualizer/msg_dialog.h"
 

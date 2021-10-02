@@ -20,7 +20,7 @@
 #include <memory>
 #include <string>
 
-#include "sensor_proto/radar.pb.h"
+#include "cyber/sensor_proto/radar.pb.h"
 #include "modules/tools/visualizer/renderable_object.h"
 
 class QOpenGLShaderProgram;

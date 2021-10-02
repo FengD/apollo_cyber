@@ -39,6 +39,7 @@ add_subdirectory(time)
 add_subdirectory(timer)
 add_subdirectory(tools)
 add_subdirectory(transport)
+add_subdirectory(sensor_proto)
 
 file(GLOB SRCS *.cc)
 add_library(${PROJECT_NAME} SHARED ${SRCS})
@@ -63,6 +64,7 @@ add_dependencies(${PROJECT_NAME} cyber_sysmo)
 add_dependencies(${PROJECT_NAME} cyber_task)
 add_dependencies(${PROJECT_NAME} cyber_timer)
 add_dependencies(${PROJECT_NAME} cyber_transport)
+add_dependencies(${PROJECT_NAME} sensor_proto)
 
 target_link_libraries(${PROJECT_NAME} 
     cyber_blocker
@@ -86,6 +88,7 @@ target_link_libraries(${PROJECT_NAME}
     cyber_task
     cyber_timer
     cyber_transport
+    sensor_proto
 )
 
 file(GLOB HEADERS *.h)

@@ -18,7 +18,7 @@
 
 #include <memory>
 
-#include "sensor_proto/lidar.pb.h"
+#include "cyber/sensor_proto/lidar.pb.h"
 #include "modules/tools/visualizer/renderable_object.h"
 
 class QOpenGLShaderProgram;

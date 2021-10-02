@@ -8,16 +8,16 @@ add_dependencies(${PROJECT_NAME}_talker cyber_example_proto cyber)
 target_link_libraries(${PROJECT_NAME}_talker cyber_example_proto cyber)
 
 add_executable(${PROJECT_NAME}_talker2 talker2.cc)
-add_dependencies(${PROJECT_NAME}_talker2 cyber sensor_proto)
-target_link_libraries(${PROJECT_NAME}_talker2 cyber sensor_proto)
+add_dependencies(${PROJECT_NAME}_talker2 cyber)
+target_link_libraries(${PROJECT_NAME}_talker2 cyber)
 
 add_executable(${PROJECT_NAME}_listener listener.cc)
 add_dependencies(${PROJECT_NAME}_listener cyber_example_proto cyber)
 target_link_libraries(${PROJECT_NAME}_listener cyber_example_proto cyber)
 
 add_executable(${PROJECT_NAME}_listener2 listener2.cc)
-add_dependencies(${PROJECT_NAME}_listener2 cyber sensor_proto)
-target_link_libraries(${PROJECT_NAME}_listener2 cyber sensor_proto)
+add_dependencies(${PROJECT_NAME}_listener2 cyber)
+target_link_libraries(${PROJECT_NAME}_listener2 cyber)
 
 add_executable(${PROJECT_NAME}_paramserver paramserver.cc)
 add_dependencies(${PROJECT_NAME}_paramserver cyber)

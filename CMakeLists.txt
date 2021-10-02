@@ -19,7 +19,6 @@ include_directories(.)
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 add_subdirectory(cyber)
-add_subdirectory(sensor_proto)
 add_subdirectory(3rd_party)
 if (BUILD_TOOLS)
     add_subdirectory(modules)

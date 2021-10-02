@@ -18,9 +18,8 @@ include_directories(
 )
 
 add_executable(${PROJECT_NAME} ${UI_HEADERS} ${SRCS} ${QRCS})
-add_dependencies(${PROJECT_NAME} sensor_proto cyber)
+add_dependencies(${PROJECT_NAME} cyber)
 target_link_libraries(${PROJECT_NAME}
-    sensor_proto
     cyber
     GL
     ${Qt5Core_LIBRARIES}
