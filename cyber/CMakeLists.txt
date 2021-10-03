@@ -66,7 +66,7 @@ add_dependencies(${PROJECT_NAME} cyber_timer)
 add_dependencies(${PROJECT_NAME} cyber_transport)
 add_dependencies(${PROJECT_NAME} sensor_proto)
 
-target_link_libraries(${PROJECT_NAME} 
+target_link_libraries(${PROJECT_NAME}
     cyber_blocker
     cyber_class_loader
     cyber_common
@@ -88,7 +88,10 @@ target_link_libraries(${PROJECT_NAME}
     cyber_task
     cyber_timer
     cyber_transport
-    sensor_proto
+)
+
+target_link_libraries(${PROJECT_NAME} -Wl,--whole-archive
+    sensor_proto  -Wl,--no-whole-archive
 )
 
 file(GLOB HEADERS *.h)
