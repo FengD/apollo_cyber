@@ -104,6 +104,6 @@ message Image2 {
   optional Compression compression = 4;
   optional uint32 step = 5;  // Full row length in bytes
   optional bytes data = 6;   // actual matrix data, size is (step * rows)
-  optional PixelFormat type = 7;
+  optional string type = 7;  // PixelFormat
   optional uint32 exposuretime = 8;  // In [us]
 }
