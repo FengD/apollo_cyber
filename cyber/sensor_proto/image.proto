@@ -61,6 +61,9 @@ enum PixelFormat {
   // This is the UYVY version of YUV422 codec http://www.fourcc.org/yuv.php#UYVY
   // with an 8-bit depth
   YUV422 = 4001;
+  YUV420 = 4002;
+  YUV444 = 4003;
+  UYUV = 5001;
 }
 
 // defined by apollo
