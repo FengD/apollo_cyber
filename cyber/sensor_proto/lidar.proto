@@ -43,6 +43,11 @@ message PointField {
     FLOAT32 = 7;
     FLOAT64 = 8;
   }
+
+  optional string name = 1;
+  optional PointFieldType datatype = 2;
+  optional uint32 offset = 3;
+  optional uint32 count = 4;
 }
 
 message PointCloud2 {
