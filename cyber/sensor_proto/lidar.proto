@@ -57,7 +57,7 @@ message PointCloud2 {
   optional uint32 height = 4;
   optional uint32 width = 5;
   optional uint32 point_step = 6;
-  optional uint32 raw_step = 7;
+  optional uint32 row_step = 7;
   optional bool is_dense = 8;
   optional bool is_bigendian = 9;
 }
