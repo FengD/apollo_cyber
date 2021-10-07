@@ -63,6 +63,7 @@ enum PixelFormat {
   YUV422 = 4001;
 }
 
+// defined by apollo
 message Image {
   optional crdc.airi.Header header = 1;
   optional string frame_id = 2;
@@ -86,4 +87,20 @@ message CompressedImage {
   optional bytes data = 4;  // Compressed image buffer
   optional double measurement_time = 5;
   optional uint32 frame_type = 6;
+}
+
+// defined by crdc airi
+message Image2 {
+  enum Compression {
+    RAW = 1;
+    JPEG = 2;
+  }
+  optional crdc.airi.Header header = 1;
+  optional uint32 height = 2;  // image height, that is, number of rows
+  optional uint32 width = 3;   // image width, that is, number of columns
+  optional Compression compression = 4;
+  optional uint32 step = 5;  // Full row length in bytes
+  optional bytes data = 6;   // actual matrix data, size is (step * rows)
+  optional PixelFormat type = 7;
+  optional uint32 exposuretime = 8;  // In [us]
 }

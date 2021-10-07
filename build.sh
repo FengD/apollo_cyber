@@ -64,8 +64,8 @@ function print_usage() {
     ${BLUE}build${NO_COLOR}: run the code build
     ${BLUE}clean${NO_COLOR}: clean the code build
     ${BLUE}cov${NO_COLOR}: run the code test coverage
-    ${BLUE}build_tools${NO_COLOR}: build tools like cyber_visualization
-    ${BLUE}build_cross${NO_COLOR}: cross compile for aarch64
+    ${BLUE}tools${NO_COLOR}: build tools like cyber_visualization
+    ${BLUE}install${NO_COLOR}: install cyber
     "
 }
 
@@ -80,7 +80,7 @@ function get_dependencies() {
 function build_make() {
     MAX_CPU_NUM=$(nproc)
     cd ${WS}/build
-    sudo make -j$[${MAX_CPU_NUM}-1] install
+    make -j$[${MAX_CPU_NUM}-1]
 
     if [ $? -eq 0 ]; then
         success 'Build passed!'
@@ -98,6 +98,11 @@ function build() {
     build_make
 }
 
+function install() {
+    cd ${WS}/build
+    make install
+}
+
 function main() {
     local cmd=$1
     cd ${WS}
@@ -113,7 +118,11 @@ function main() {
     START_TIME=$(get_now)
     WITH_COV=OFF
     DO_TEST=OFF
-    WITH_AARCH64=OFF
+    if [ "${PLATFORM}" = "AARCH64" ]; then
+        WITH_AARCH64=ON
+    else
+        WITH_AARCH64=OFF
+    fi
     WITH_TOOLS=OFF
     case $cmd in
         build)
@@ -132,15 +141,13 @@ function main() {
             get_dependencies
             build
             ;;
-        build_tools)
+        tools)
             WITH_TOOLS=ON
             get_dependencies
             build
             ;;
-        build_cross)
-            WITH_AARCH64=ON
-            get_dependencies
-            build
+        install)
+            install
             ;;
         *)
             print_usage

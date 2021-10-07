@@ -10,10 +10,14 @@ Apollo cyber is a great runtime framework.
 run `./build.sh help` to see the details.
 
 # for aarch64
-`./build.sh build_cross` clean the build.
+export PLATFORM="AARCH64"
+`./build.sh` for cross build.
 
 # for tools
-`./build.sh build_tools` clean the build.
+`./build.sh tools` for build the tools.
+
+# Install
+`./build.sh install` install to install path.
 
 # Tools
 * deps: qt5
