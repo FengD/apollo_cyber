@@ -10,4 +10,4 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 file(GLOB HEADERS *.h)
-install(FILES ${HEADERS} DESTINATION apollo/cyber/include/cyber/logger/)
+install(FILES ${HEADERS} DESTINATION apollo/cyber/include/cyber/record/)

@@ -8,7 +8,6 @@ set(CMAKE_BUILD_TYPE "Release")
 
 if (USE_TEST)
     find_package(GTest MODULE REQUIRED)
-    find_package(Threads)
     enable_testing()
 endif()
 
@@ -19,7 +18,3 @@ include_directories(.)
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 add_subdirectory(cyber)
-add_subdirectory(3rd_party)
-if (BUILD_TOOLS)
-    add_subdirectory(modules)
-endif()

@@ -9,6 +9,12 @@ else()
     message(FATAL_ERROR "protobuf library is needed but cant be found")
 endif()
 
+if(DEFINED ENV{SDKTARGETSYSROOT})
+    set(Protobuf_INCLUDE_DIRS $ENV{SDKTARGETSYSROOT}/usr/include CACHE INTERNAL "Protobuf_include")
+    set(Protobuf_LIBRARIES $ENV{SDKTARGETSYSROOT}/usr/lib/libprotobuf.so CACHE INTERNAL "Protobuf_libraries")
+    set(Protobuf_PROTOC_LIBRARIES $ENV{SDKTARGETSYSROOT}/usr/lib/libprotoc.so CACHE INTERNAL "Protobuf_protoc_libraries")
+endif()
+
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/proto)
 
 add_subdirectory(base)
@@ -80,7 +86,6 @@ target_link_libraries(${PROJECT_NAME}
     cyber_node
     cyber_parameter
     cyber_proto
-    cyber_record
     cyber_scheduler
     cyber_scheduler_policy
     cyber_service_discovery
@@ -91,7 +96,7 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME} -Wl,--whole-archive
-    sensor_proto  -Wl,--no-whole-archive
+    cyber_record sensor_proto  -Wl,--no-whole-archive
 )
 
 file(GLOB HEADERS *.h)

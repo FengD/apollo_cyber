@@ -30,4 +30,10 @@ message Header {
   optional StatusPb status = 8;
 
   optional string frame_id = 9;
+
+  // Ins Sensor timestamp for nano-second.
+  optional uint64 ins_timestamp = 10;
+
+  // other timestamp for nano-second.
+  optional uint64 other_timestamp = 11;
 }

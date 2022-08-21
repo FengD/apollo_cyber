@@ -10,7 +10,7 @@ Apollo cyber is a great runtime framework.
 run `./build.sh help` to see the details.
 
 # for aarch64
-export PLATFORM="AARCH64"
+export ARCH="arm64" (normally if you are in the cross compile enviroment the variable should be already exists.)
 `./build.sh` for cross build.
 
 # for tools
@@ -28,8 +28,11 @@ export PLATFORM="AARCH64"
 * uuid
 * rt
 * pthread
-* protobuf
+* protobuf 3.15.0
 * fastrtps (in 3rd_party for x86_64/aarch64) copy `lib` in /usr/local/lib and `include` in /usr/local/include
+* poco 1.9.0
+* gflags 2.2.2
+* glog 0.4.0
 
 # Best practice
 [test_project](https://github.com/FengD/apollo_cyber_test)

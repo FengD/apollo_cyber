@@ -84,17 +84,26 @@ function build_make() {
 
     if [ $? -eq 0 ]; then
         success 'Build passed!'
+        exit 0
     else
         fail 'Build failed!'
+        exit 1
     fi
 }
 
 function build() {
+    echo "Running build on [${PLATFORM}]"
+
+    if [[ "${CI_BUILD}" == "ON" ]];then
+        INSTALL_PATH="${WS}/build_dist"
+    fi
+
     mkdir -p ${WS}/build && cd ${WS}/build
     cmake -DWITH_COV=${WITH_COV} \
-          -DDO_TEST=${DO_TEST} \
-          -DBUILD_AARCH64=${WITH_AARCH64}  \
-          -DBUILD_TOOLS=${WITH_TOOLS}  ..
+        -DDO_TEST=${DO_TEST} \
+        -DBUILD_AARCH64=${WITH_AARCH64}  \
+        -DCMAKE_INSTALL_PREFIX:PATH="$INSTALL_PATH" \
+        -DBUILD_TOOLS=${WITH_TOOLS}  ..
     build_make
 }
 
@@ -118,8 +127,25 @@ function main() {
     START_TIME=$(get_now)
     WITH_COV=OFF
     DO_TEST=OFF
-    if [ "${PLATFORM}" = "AARCH64" ]; then
+    INSTALL_PATH="/usr/local/"
+
+    if [[ "${PLATFORM}" == "TDA4" ]];then
+        # 0703 
+        # source /opt/ti-processor-sdk-linux-j7-evm-07_03_00_05/linux-devkit/environment-setup-aarch64-linux
+        # 0702
+        # source /opt/ti-processor-sdk-linux-j7-evm-07_02_00_07/linux-devkit/environment-setup-aarch64-linux
+        source $(find /opt/ -name environment-setup-aarch64-linux)
+    fi
+
+    if [[ "${PLATFORM}" == "A6" ]];then
+        source /opt/hirain-imx-linux/4.14-sumo/environment-setup-aarch64-poky-linux
+    fi
+
+    if [ "${ARCH}" = "arm64" ]; then
         WITH_AARCH64=ON
+        if [ $SDKTARGETSYSROOT ]; then
+            INSTALL_PATH="$SDKTARGETSYSROOT/usr"
+        fi
     else
         WITH_AARCH64=OFF
     fi

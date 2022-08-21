@@ -1,5 +1,20 @@
 project(sensor_proto)
 
+find_package(Protobuf REQUIRED)
+if(PROTOBUF_FOUND)
+    message(STATUS "protobuf library found")
+else()
+    message(FATAL_ERROR "protobuf library is needed but cant be found")
+endif()
+
+if(DEFINED ENV{SDKTARGETSYSROOT})
+    set(Protobuf_INCLUDE_DIRS $ENV{SDKTARGETSYSROOT}/usr/include)
+    set(Protobuf_LIBRARIES $ENV{SDKTARGETSYSROOT}/usr/lib/libprotobuf.so)
+    set(Protobuf_PROTOC_LIBRARIES $ENV{SDKTARGETSYSROOT}/usr/lib/libprotoc.so)
+endif()
+
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/proto)
+
 file(GLOB proto_srcs *.proto)
 set(Protobuf_USE_STATIC_LIBS on)
 
