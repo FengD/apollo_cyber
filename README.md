@@ -25,11 +25,11 @@ apt install libtinyxml2-dev
 apt install uuid
 apt install libpthread-dev
 ```
-* protobuf 3.15.0
+* protobuf 3.15.0 [protobuf](https://github.com/protocolbuffers/protobuf.git) tag v3.15.0
 * fastrtps 1.5.0 with patch of apollo https://github.com/FengD/apollo_deps_installer/blob/master/installers/FastRTPS_1.5.0.patch
-* poco 1.9.0
-* gflags 2.2.2
-* glog 0.4.0
+* poco 1.9.0 [poco](https://github.com/pocoproject/poco) tag poco-1.9.0-release
+* gflags 2.2.2 [gflags](https://github.com/gflags/gflags) tag v2.2.2
+* glog 0.4.0 [glog](https://github.com/google/glog) tag v0.4.0
 * 
 The dependencies above can use dependencies installer from [apollo_deps_installer](https://github.com/FengD/apollo_deps_installer).
 
