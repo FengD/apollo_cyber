@@ -35,3 +35,6 @@ The dependencies above can use dependencies installer from [apollo_deps_installe
 
 # Best practice
 [test_project](https://github.com/FengD/apollo_cyber_test)
+
+# Use
+* After successfully make and install. Define the `CYBER_PATH=[installation path]` to use.
