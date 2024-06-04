@@ -1,7 +1,7 @@
 # Description
-Apollo cyber is a great runtime framework.
+Apollo cyberRT is a great runtime framework. The original project construct by [bazel](https://bazel.build/) which is a google build structure tools. And for the convinient use with the cmake project I rewrite the project as a cmake project.
 
-* cyber: The apollo [cyber](https://github.com/ApolloAuto/apollo/tree/master/cyber)
+* CyberRT: The apollo [CyberRT](https://github.com/ApolloAuto/apollo/tree/master/cyber)
 
 # Build
 `./build.sh` build the project.
