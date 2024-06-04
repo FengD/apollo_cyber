@@ -109,12 +109,12 @@ message PerceptionObstacle {
   optional double tracking_time = 9;
 
   enum Type {
-    UNKNOWN = 0;
+    VEHICLE = 0;     // Passenger car or truck.
     UNKNOWN_MOVABLE = 1;
     UNKNOWN_UNMOVABLE = 2;
     PEDESTRIAN = 3;  // Pedestrian, usually determined by moving behavior.
     BICYCLE = 4;     // bike, motor bike
-    VEHICLE = 5;     // Passenger car or truck.
+    UNKNOWN = 5;
   };
   optional Type type = 10;         // obstacle type
   optional double timestamp = 11;  // GPS time in seconds.
@@ -185,7 +185,6 @@ message PerceptionObstacle {
   optional int32 track_status = 27; // -1: unknow, 0: static, 1: moving
   optional double track_status_reside_length = 28; // the duration time of track status, (s)
 
-  // Ali-XLab-Begin {zhijie.yb} {2019-10-11}
   enum ShapeType{
     POLYGON = 0;
     BBOX = 1;
@@ -372,7 +371,6 @@ message PerceptionObstacle {
   // Compression during transmission for XDream 
   optional bytes compress_data = 155;
 
-  // Ali-XLab-End
 }
 
 message PerceptionOnlineArea {
@@ -445,7 +443,6 @@ message PerceptionPostTracking {
  optional RawMeasureVision raw_measure_vision = 2; // vision raw measurement
 }
 
-// Ali-XLab-Begin {dongpeng.ldp} {2019-11-22}
 message LaneBoundaryType {
   enum Type {
     UNKNOWN = 0;
@@ -461,13 +458,10 @@ message LaneBoundaryType {
   // support multiple types
   repeated Type types = 2;
 }
-// Ali-XLab-End
 
 message LaneMarker {
-// Ali-XLab-Begin {dongpeng.ldp} {2019-11-22}
   // optional adlab.map.LaneBoundaryType.Type lane_type = 1;
   optional LaneBoundaryType.Type lane_type = 1;
-// Ali-XLab-End
   optional double quality = 2;  // range = [0,1]; 1 = the best quality
   optional int32 model_degree = 3;
 

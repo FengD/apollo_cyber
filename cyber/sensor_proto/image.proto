@@ -97,6 +97,7 @@ message Image2 {
   enum Compression {
     RAW = 1;
     JPEG = 2;
+    H264 = 3;
   }
   optional crdc.airi.Header header = 1;
   optional uint32 height = 2;  // image height, that is, number of rows
