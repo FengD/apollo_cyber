@@ -130,15 +130,7 @@ function main() {
     INSTALL_PATH="/usr/local/"
 
     if [[ "${PLATFORM}" == "TDA4" ]];then
-        # 0703 
-        # source /opt/ti-processor-sdk-linux-j7-evm-07_03_00_05/linux-devkit/environment-setup-aarch64-linux
-        # 0702
-        # source /opt/ti-processor-sdk-linux-j7-evm-07_02_00_07/linux-devkit/environment-setup-aarch64-linux
         source $(find /opt/ -name environment-setup-aarch64-linux)
-    fi
-
-    if [[ "${PLATFORM}" == "A6" ]];then
-        source /opt/hirain-imx-linux/4.14-sumo/environment-setup-aarch64-poky-linux
     fi
 
     if [ "${ARCH}" = "arm64" ]; then
