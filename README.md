@@ -20,10 +20,7 @@ export ARCH="arm64" (normally if you are in the cross compile enviroment the var
 # Dependencies
 
 ``` shell
-apt install asio-dev
-apt install libtinyxml2-dev
-apt install uuid
-apt install libpthread-dev
+apt install libasio-dev libtinyxml2-dev uuid
 ```
 * protobuf 3.15.0 [protobuf](https://github.com/protocolbuffers/protobuf.git) tag v3.15.0
 * fastrtps 1.5.0 with patch of apollo https://github.com/FengD/apollo_deps_installer/blob/master/installers/FastRTPS_1.5.0.patch
